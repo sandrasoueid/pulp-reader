@@ -1,2 +1,1 @@
-# Procfile
 web: sh -c "python3 tts_server.py & npm start"
