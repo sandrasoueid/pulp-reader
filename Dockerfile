@@ -1,5 +1,5 @@
 # 1) Base image with Node
-FROM node:16-slim
+FROM node:20-slim
 
 # 2) Install Python3, pip, build essentials for TTS
 RUN apt-get update && \
@@ -20,7 +20,7 @@ COPY . /app
 
 # 6) Expose (internally) your TTS port & Heroku’s port
 #    Note: Heroku will ignore EXPOSE and bind only to $PORT
-EXPOSE 5001            # Python TTS
+EXPOSE 5001
 # Node will listen on $PORT
 
 # 7) Start both services:
