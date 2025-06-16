@@ -1,1 +1,1 @@
-web: sh -c "python3 tts_server.py & npm start"
+web: sh -c "gunicorn tts_server:app --bind 0.0.0.0:5001 & npm start"
